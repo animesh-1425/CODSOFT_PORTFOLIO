@@ -1,0 +1,232 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&family=Montserrat&family=Orbitron&family=Poppins:wght@100;200;300&family=Russo+One&family=Staatliches&family=VT323&family=Vina+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FBEEE6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+  
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #738FA7;
+    clip-path: circle(20% at 10% 10%);
+}
+
+
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #4d1635;
+    clip-path: circle(30% at right 50%);
+    /* #758eb7 */
+}
+
+
+
+.nav-item:hover{
+   box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+    
+}
+.navbar{
+    background: transparent;
+    
+}
+.a1{
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    width:75%;
+    height:fit-content;
+    margin-left:170px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+   border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.heroheading{
+    font-family: 'Staatliches', cursive;
+    font-size: 80px;
+}
+#hero{
+    margin-top: 2em;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#about{
+    font-size: 18px; 
+    font-weight: 600;
+    color: rgb(90, 90, 90);
+}
+#intro{
+    font-size: 18px; 
+    font-weight: 400;
+    color: white;
+}
+
+#cv{
+ border: none;
+ width: fit-content;
+ height: fit-content;
+ background-color: #955670;
+ padding: 10px 20px;
+ border-radius: 8px;
+ color: white;
+ box-shadow: 6px 6px 0 #4d1635;
+ transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+
+#cv:active{
+    transform: translateX(6px) translateY(6px);
+    box-shadow: 0 0 0 rgb(81, 13, 146);
+}
+
+#scroll-container{
+    max-width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(57, 64, 64);
+    position:relative;
+    z-index: 1;
+    padding: 10px;
+    overflow:hidden;
+    
+} 
+.scroll-text{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+   justify-content: space-between;
+    color:white;
+    font-size: 20px;
+    
+    -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  
+  -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 20s linear infinite;
+}
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(-50%); }
+    to { -webkit-transform: translateX(50%); }
+  }
+
+  @-moz-keyframes my-animation {
+    from { -webkit-transform: translateX(-50%); }
+    to { -webkit-transform: translateX(50%); }
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    to {
+      -moz-transform: translateX(50%);
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%);
+    }
+  }
+
+  
+
+h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    color: #4d1635;
+    display: flex;
+    justify-content: center;
+}
+h2{ 
+
+    font-family: 'Staatliches', cursive;
+    color: #FBEEE6;
+    font-size:50px ;
+    font-weight: 500;
+}
+.skills::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #955670;
+    box-shadow: 12px 12px 0 #4d1635;
+    z-index: -1;
+    transform: skewY(-5deg);
+}
+.skill{
+    margin-top: 10vh;
+}
+
+.skillimage{
+    margin-top: 7vh;
+   
+}
+@media only screen and (max-width:660px){
+    .a1{
+        width:100%;
+        margin-left: 0;
+    }
+    #hero{
+     width:20vh;
+     height: 30vh;
+    }
+    .collapse{
+        background-color: white;
+        border-radius: 6px;
+    }
+    .nav-link{
+        padding-left: 15px;
+    }
+  .a1 h1{
+    font-size: 40px;
+  }
+  #about{
+    font-size: 8px;
+    font-weight: 600;
+  }
+   
+    #intro{
+        font-size: 10px;
+    }
+    #cv{
+        padding: 2px 5px;
+        width: 10vh;
+        height: 4vh;
+        font-size: 10px;
+       }
+       #hero{
+        margin-top: 9rem;
+       }
+}
