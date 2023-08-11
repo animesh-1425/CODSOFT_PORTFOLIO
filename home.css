@@ -218,7 +218,7 @@ h2{
   }
    
     #intro{
-        font-size: 10px;
+        font-size: 8px;
     }
     #cv{
         padding: 2px 5px;
@@ -229,4 +229,9 @@ h2{
        #hero{
         margin-top: 7rem;
        }
+
+    .skillimage{
+        height: 15vh;
+      
+    }   
 }
