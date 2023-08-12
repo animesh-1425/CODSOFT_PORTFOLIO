@@ -11,6 +11,8 @@ body{
   
 }
 
+
+
 body::before{
     content: '';
     position: absolute;
@@ -112,7 +114,7 @@ body::after{
     max-width: 100%;
     margin-top: 60px;
     margin-bottom: 60px;
-    background-color: rgb(57, 64, 64);
+    background-color:#FBEEE6;
     position:relative;
     z-index: 1;
     padding: 10px;
@@ -125,7 +127,7 @@ body::after{
     align-items: center;
     text-align: right;
    justify-content: space-between;
-    color:white;
+    color:#4d1635;
     font-size: 20px;
     
     -moz-transform: translateX(-50%);
@@ -193,14 +195,138 @@ h2{
     margin-top: 7vh;
    
 }
+
+
+
+.menu{
+    position:absolute;
+   width:280px;
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #4d1635;
+  }
+  .menu .toggle{
+    position:relative;
+    height:60px;
+    width:60px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    cursor:pointer;
+    transition:1.25s;
+    z-index:5;
+  }
+  .menu.active .toggle{
+    transform:rotate(360deg);
+   
+  }
+  .menu li{
+    position:absolute;
+    left:0;
+    list-style:none;
+    transition:0.5s;
+    transform:rotate(calc(360deg/8 * var(--i)));
+    transform-origin:140px;
+    scale:0;
+    transition-delay: calc(0.05s * var(--i));
+  }
+  .menu.active li{
+    scale:1;
+  }
+  .menu li i{
+    position:relative;
+    display:flex;
+   transform:rotate(calc(360deg/-8 * var(--i)));
+    width:60px;
+    height:60px;
+    background-color:#FFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:1.75rem;
+    color:var(--color);
+    transition:0.5s;
+    text-decoration: none;
+  }
+  .menu li:hover i{
+    font-size:2.5rem;
+    
+  }
+ 
+
+
+  .work{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    width:26%;
+    border-radius: 5px;
+    margin-top: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.work:hover{
+    box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.layer{
+    width:100%;
+    height:0;
+    background: rgba(219, 215, 215, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+    transition: height 0.5s;
+    
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.b1{
+    background-color: rgb(37, 110, 169);
+    color: white;
+}
+.b1:hover{
+    cursor: pointer;
+    background-color: rgb(5, 78, 151);
+}
+  
+#prhead{
+  text-decoration: none;
+  color: white;
+}
+  
+  
 @media only screen and (max-width:660px){
     .a1{
         width:100%;
         margin-left: 0;
     }
     #hero{
-     width:20vh;
-     height: 30vh;
+     width:21vh;
+     height: 25vh;
+     margin-top: 8rem;
+    
     }
     .collapse{
         background-color: white;
@@ -217,7 +343,7 @@ h2{
     font-weight: 600;
   }
    
-    #intro{
+  #intro{
         font-size: 8px;
     }
     #cv{
@@ -226,12 +352,19 @@ h2{
         height: 4vh;
         font-size: 10px;
        }
-       #hero{
-        margin-top: 7rem;
-       }
-
+       
     .skillimage{
-        height: 15vh;
+      margin-top: 10vh;
+        height: 16vh;
       
     }   
+
+
+    
+}
+@media only screen and (max-width:912px){
+
+.work{
+  width:80%;
+}
 }
