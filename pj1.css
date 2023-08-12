@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&family=Montserrat&family=Orbitron&family=Poppins:wght@100;200;300&family=Russo+One&family=Staatliches&family=VT323&family=Vina+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #C2EDC2;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #8DBD61;
+    clip-path: circle(20% at 10% 10%);
+}
+
+
+.nav-item:hover{
+    border-left: 1px solid white;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+     
+ }
+ .navbar{
+     background: transparent;
+     
+ }
+ .navbar a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+ }
+ #about{
+    font-size: 18px; 
+    font-weight: 600;
+    color: cornsilk;
+}
+h2{
+    font-size: 25px;
+    font-weight: 800;
+}
+h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(90, 90, 90);
+}
+h1{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+@media only screen and (max-width:912px){
+
+   .row-lg{
+    display: flex;
+    justify-content: center;
+   }
+    }
