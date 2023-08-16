@@ -1,251 +1,560 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-  <title>Animesh</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&family=Montserrat&family=Orbitron&family=Poppins:wght@100;200;300&family=Russo+One&family=Staatliches&family=VT323&family=Vina+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    
-  <!-- fontawsomeiconn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link rel="stylesheet" href="home.css">
-</head>
+:root{
+  --bg:#FBEEE6;
+  --navhead:black;
+  --fcirc:#738FA7;
+  --scirc:#4d1635;
+  --bgshadow:7px 7px 5px rgba(0, 0, 0, 0.2);
+  --fltdivshadow:20px 20px 30px rgba(0, 0, 0, 0.5);
+  --about:rgb(90, 90, 90);
+  --cvbtn:#955670;
+  --cvshadow:6px 6px 0 #4d1635;
+  --skillskew:12px 12px 0 #4d1635;
+  --workhover:20px 20px 30px 0px rgba(0, 0, 0, 0.3);
+  --edubg:url("https://images.unsplash.com/photo-1499914485622-a88fac536970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+  --prjhead: rgb(37, 110, 169);
+  --prjhover: rgb(5, 78, 151);
+  --source3:url('WhatsApp Image 2023-08-13 at 19.06.55 (1).jpeg');
+  --h1:#4d1635;
+  --h2:#FBEEE6;
+  --footer:#4d1635;
+}
+.dark{
+  --bg:linear-gradient(to right,#00081c,#09173d, #0a034a,#260052,#5f005f,#b40b8f);
+  --navhead:white;
+  --fcirc:url('galaxy2.jpeg');
+  --scirc:url('galaxy.jpg');
+  --bgshadow:7px 7px 5px rgba(255, 255, 255, 0.2);
+  --fltdivshadow:20px 20px 30px rgba(0, 0, 0, 0.5);
+  --about:rgb(193, 193, 193);
+  --cvbtn:url('galaxy9.jpg');
+  --cvshadow:6px 6px 0 #fff;
+  --skillskew:12px 12px 0 #ffffff;
+  --workhover:20px 20px 30px 0px rgba(0, 0, 0, 0.3);
+  --edubg:url('galaxy9.jpg');
+  --prjhead: rgb(37, 110, 169);
+  --prjhover: rgb(5, 78, 151);
+  --source3:url('galaxy2.jpeg');
+  --h1:white;
+  --h2:white;
+  --footer:url('galaxy9.jpg');
+}
 
-<body>
-  <header>
-   <nav class="navbar navbar-expand-sm navbar-light  ">
-      <div class="container">
-        <a class="navbar-brand pt-2 mx-5" href="#"><img src="logo.png" alt="Animesh Dey" width="100px" height="80px"></a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse mx-5 " id="collapsibleNavId">
-            <ul class="  navbar-nav me-auto mx-lg-5 mt-2 mt-lg-0">
-                <li class="nav-item  mx-lg-3">
-                    <a class="nav-link active" href="#" aria-current="page"><p class="navhead">Home</p></a>
-                </li>
-                <li class="nav-item mx-lg-3">
-                    <a class="nav-link active" href="#skills" aria-current="page"><p class="navhead">Skills</p></a>
-                </li>
-                <li class="nav-item mx-lg-3">
-                    <a class="nav-link active" href="#project" aria-current="page"><p class="navhead">Education</p></a>
-                </li>
-                <li class="nav-item mx-lg-3">
-                    <a class="nav-link active" href="#" aria-current="page"><p class="navhead">Projects</p></a>
-                </li>
-            </ul>
-           
-        </div>
-        <img src="moon.png"  id="icon">
-     </div>
-   </nav>
+
+
+body{
+    background: var(--bg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+  
+}
+#icon{
+  width: 30px; 
+  cursor: pointer;
+  margin-right:45vh ;
+}
+
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: var(--fcirc);
+    clip-path: circle(20% at 10% 10%);
+}
+
+
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: var(--scirc);
+    clip-path: circle(30% at right 50%);
+    /* #758eb7 */
+}
+
+
+
+.nav-item:hover{
+   box-shadow: var(--bgshadow);
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
    
-  </header>
-  <main >
-    <div class="container my-3" >
-       <div class="row a1">
+   border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.navhead{
+  color:var(--navhead);
+}
+.navbar{
+    background: transparent;
+    
+}
+.a1{
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    width:75%;
+    height:fit-content;
+    margin-left:170px;
+    box-shadow: var(--fltdivshadow);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+   border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.heroheading{
+    font-family: 'Staatliches', cursive;
+    font-size: 80px;
+}
+#hero{
+    margin-top: 2em;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#about{
+    font-size: 18px; 
+    font-weight: 600;
+    color: var(--about);
+}
+#intro{
+    font-size: 18px; 
+    font-weight: 400;
+    color: white;
+}
 
-           <div class="col-6 mx-lg-5"> 
-             <h1 class="heroheading mx-3 my-5">I AM <br>ANIMESH DEY</h1>
-              <p id="about" >I'm a motivated 3rd-year Computer Science student pursuing a B.Tech degree with a keen interest in web development. My journey has cultivated strong time management skills, a knack for teamwork, and a passion for crafting engaging digital experiences. Eager to contribute my technical expertise and collaborative spirit to meaningful projects.</p>
-              <button class="my-5" id="cv">Download CV</button>
-           </div>
+#cv{
+ border: none;
+ width: fit-content;
+ height: fit-content;
+ background: var(--cvbtn);
+ padding: 10px 20px;
+ border-radius: 8px;
+ color: white;
+ box-shadow: var(--cvshadow);
+ transition: transform 0.2s, box-shadow 0.2s;
 
-            <div class="col-4 my-lg-5">
-             <img id="hero" src="my.png" alt="pic">
-            </div>
-        </div>
+}
+
+
+#cv:active{
+    transform: translateX(6px) translateY(6px);
+    box-shadow: 0 0 0 rgb(81, 13, 146);
+}
+
+#scroll-container{
+  max-width: 100%;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  background-color: rgb(57, 64, 64);
+  position:relative;
+  z-index: 1;
+  padding: 10px;
+  overflow:hidden;
+  
+  
+} 
+
+.content-top, .content-bottom{
+  width: 100%;
+  height: 100px;
+  background-color:var(--scirc);
+  position: relative;
+  
+}
+.content-top:before {
+    content: " ";
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: 80%;
+    background-color:var(--bg);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.content-bottom:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    height: 90%;
+    background-color:var(--bg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+
+.scroll-text{
+  padding-top:20px;
+  width:80%;
+  text-align: right;
+  color:white;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-transform: translateX(-100%);
+-webkit-transform: translateX(-100%);
+transform: translateX(-100%);
+
+-moz-animation: my-animation 20s linear infinite;
+-webkit-animation: my-animation 20s linear infinite;
+animation: my-animation 20s linear infinite;
+}
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(-100%); }
+  to { -webkit-transform: translateX(100%); }
+}
+
+@-moz-keyframes my-animation {
+  from { -webkit-transform: translateX(-100%); }
+  to { -webkit-transform: translateX(100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+
+h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    color: var(--h1);
+    display: flex;
+    justify-content: center;
+}
+h2{ 
+
+    font-family: 'Staatliches', cursive;
+    color: var(--h2);
+    font-size:50px ;
+    font-weight: 500;
+}
+
+.skills::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--cvbtn);
+    
+    box-shadow: var(--skillskew);
+    z-index: -1;
+    transform: skewY(-5deg);
+}
+.skill{
+    margin-top: 10vh;
+}
+
+.skillimage{
+    margin-top: 7vh;
+   
+}
+
+#langdiv{
+  background:var(--source3); 
+  
+  clip-path:polygon(0 0, 100% 0%, 100% 100%, 70% 80%, 0 100%);
+  height: 70vh;
+   width: 100%; 
+   display: flex;
+   align-items: center;
+  justify-content: center;
+}
+
+
+
+.menu{
+    position:absolute;
+   width:280px;
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: transparent;
+  }
+  .menu .toggle{
+    position:relative;
+    height:60px;
+    width:60px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    cursor:pointer;
+    transition:1.25s;
+    z-index:5;
+  }
+  .menu.active .toggle{
+    transform:rotate(360deg);
+   
+  }
+  .menu li{
+    position:absolute;
+    left:0;
+    list-style:none;
+    transition:0.5s;
+    transform:rotate(calc(360deg/8 * var(--i)));
+    transform-origin:140px;
+    scale:0;
+    transition-delay: calc(0.05s * var(--i));
+  }
+  .menu.active li{
+    scale:1;
+  }
+  .menu li i{
+    position:relative;
+    display:flex;
+   transform:rotate(calc(360deg/-8 * var(--i)));
+    width:60px;
+    height:60px;
+    background-color:#FFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:1.75rem;
+    color:var(--color);
+    transition:0.5s;
+    text-decoration: none;
+  }
+  .menu li:hover i{
+    font-size:2.5rem;
+    
+  }
+ 
+
+
+  .work{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    width:26%;
+    border-radius: 5px;
+    margin-top: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.work:hover{
+    box-shadow: var(--workhover);
+}
+
+
+.layer{
+    width:100%;
+    height:0;
+    background: rgba(219, 215, 215, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+    transition: height 0.5s;
+    
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.b1{
+    background-color:var(--prjhead);
+    color: white;
+}
+.b1:hover{
+    cursor: pointer;
+    background-color: var(--prjhover)
+}
+  
+#prhead{
+  text-decoration: none;
+  color: white;
+}
+
+.a2{
+  position: relative;
+  z-index: 1;
+  width:85%;
+  height:82vh;
+  margin-left:80px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+ border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.a2::before{
+  content: ' ';
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0.28;
+background-image: var(--edubg) ;
+background-repeat: no-repeat;
+background-position: 50% 0;
+background-size: cover;
+}
+.suba1{
+  position: relative;
+ 
+}
+
+
+
+
+li>p{
+  font-size: 18px;
+  color: rgb(210, 206, 206);
+  
+}
+
+ul{
+  list-style-type:none;
+}
+
+footer{
+  width: 100%;
+  padding: 100px 0 30px;
+  border-top-left-radius:125px;
+  background: var(--footer);
+}
+footer .row{
+  width: 85%;
+  align-items: center;
+  justify-content: space-between;
+}
+footer.col-lg-6,.col-md-6{
+    
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+}
+footer p,i {
+  color: rgb(190, 190, 190);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+
+.email{
+  border-bottom: 1px solid #ccc;
+  width: fit-content;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+  
+  
+@media only screen and (max-width:660px){
+    .a1{
+        width:100%;
+        margin-left: 0;
+    }
+    #hero{
+     width:21vh;
+     height: 25vh;
+     margin-top: 8rem;
+    
+    }
+    .collapse{
+        background-color: white;
+        border-radius: 6px;
+    }
+    .nav-link{
+        padding-left: 15px;
+    }
+  .a1 h1{
+    font-size: 40px;
+  }
+  #about{
+    font-size: 8px;
+    font-weight: 600;
+  }
+
+  h1{
+    font-size: 60px;
+    font-weight: 500;
+  }
+   
+  #intro{
+        font-size: 8px;
+    }
+    #cv{
+        padding: 2px 5px;
+        width: 10vh;
+        height: 4vh;
+        font-size: 10px;
+       }
        
-    </div>  
-    <!-- ABOUT SECTION END-->
-
-    <div id="scroll-container">
-      <div class="scroll-text">
-        <p id="sc" >Web development</p> 
-        <p id="sc">Art</p>
-        <p id="sc">Freelancer</p>
-        <p id="sc">Animation</p>
-        <p id="sc">Illustration</p>  
-      </div>
+    .skillimage{
+      margin-top: 10vh;
+        height: 16vh;
       
-      
-    </div>
-      <!-- STRAPS -->
+    }   
+  #icon{
+    margin-top: -11vh;
     
-    <div   id="skills" class="container my-5">
-        <div id="head1"  ><h1>SKILLS</h1></div>
-        
-        <!-- SKILLS START FORM HERE -->
+  }
+  #langdiv{
+    clip-path:polygon(0 0, 100% 0%, 100% 100%, 70% 90%, 0 100%);
+  }
+  .dark{
+    --scirc:url('galaxy2.jpeg');
+    --cvshadow:4px 4px 0 #fff;
+  }
 
-        <div  class="pb-4 skills" style="position: relative;" >
-            
-            <div class=" row skill">
-                <div class="col-6">
-                   <h2 class="mx-5 my-lg-5" style="padding-top: 2vh;" >WEB DEVELOPER</h2>
-                
-                   <p id="intro" class="mx-4">As a skilled web developer, I bring creative visions to life through the power of code and design. With a passion for crafting seamless user experiences, I thrive on translating ideas into interactive and responsive websites. My toolbox includes a deep understanding of HTML, CSS, and JavaScript, which I wield to build user-friendly interfaces that captivate and engage visitors. 
-                   </p>
-                </div>
-               <div class="col-6" style="display: flex; align-items: center;">
-                 <img class=" skillimage mx-lg-5" src="webd.png" alt="web" >
-               </div>
-            </div>
-        </div>
+}
+@media only screen and (max-width:912px){
 
-        <div  class="pb-4 skills" style="position: relative;" >
-            
-            <div class=" row skill">
-                <div class="col-6">
-                    <img class=" skillimage mx-5" src="Hands - Show.png" alt="web" >
-                  </div>
-                <div class="col-6" style="display: flex; justify-content: right; flex-direction: column;">
-                   <h2 class=" my-3 mx-3">ARTIST</h2>
-                
-                   <p id="intro" class="mx-4">
-                    I am a seasoned artist with over 15 years of experience, specializing in art and painting. Possessing a deep passion for creativity, I hold a master's degree in the field. My extensive journey has honed my skills and nurtured my love for artistic expression, allowing me to create meaningful and captivating works of art.
-                   </p>
-                </div>
-              
-            </div>
-        </div>
+.work{
+  width:80%;
+}
+.a2{
+  width: 100%;
+  margin-left: 0;
+  height: 85vh;
+}
 
-        <div id="skills" class=" pb-4 skills" style="position: relative;" >
-            
-            <div class=" row skill">
-                <div class="col-6">
-                   <h2 class="mx-5 my-lg-5" style="padding-top: 5vh;">FREELANCER</h2>
-                
-                   <p id="intro" class="mx-4">"As a skilled web developer, I bring creative visions to life through the power of code and design. With a passion for crafting seamless user experiences, I thrive on translating ideas into interactive and responsive websites.From designing captivating layouts to implementing complex functionalities, I'm dedicated to delivering solutions that not only meet but exceed expectations.I'm here to turn concepts into visually appealing and highly functional web realities."
-                   </p>
-                </div>
-               <div class="col-6" style="display: flex; align-items: center;">
-                 <img class=" skillimage mx-lg-5" src="free.png" alt="web" >
-               </div>
-            </div>
-        </div>
-      
-    </div><!-- SKILLS END -->
 
-   
-    <!-- langugae rotate -->
-    <div id="head1" style="margin-top: 15vh;" ><h1>LANGUAGES</h1></div>
-    <div id="langdiv"> 
-       
-        <div class="menu">
-                  <div class="toggle"><i class="fa-solid fa-lightbulb"></i></div>
-      
-          
-                  <li style="--i:0;color:#1877f2;">
-                    <i class="fa-brands fa-html5"></i>
-                  </li>
-                  <li style="--i:1;color:#25d366">
-                    <i class="fa-brands fa-css3-alt"></i>
-                  </li>
-                  <li style="--i:2;color:#1da1f2">
-                   <i class="fa-brands fa-bootstrap"></i>
-                  </li>
-                   <li style="--i:3;color:#FF5733">
-                    <i class="fa-brands fa-square-js"></i>
-                  </li>
-                  <li style="--i:4;color:#0a66c2">
-                    <i class="fa-brands fa-react"></i>
-                  </li>
-                  <li style="--i:5;color:#c32aa3">
-                   <i class="fa-solid fa-database"></i>
-                  </li>
-                  <li style="--i:6;color:#1b1e21">
-                   <i class="fa-brands fa-python"></i>
-                  </li>
-                  <li style="--i:7;color:#ff0000">
-                  <i class="fa-brands fa-java"></i>
-                  </li>
-      
-        
-        
-       </div>
-    </div>
-   <!-- langugae end -->
-    
-    
-    
-   <!-- projct --> 
-    <div  class="container d-flex flex-column align-items-flex-start justify-content-center my-5" >
-          
-          <div id="head1" style="margin-top: 12vh;" ><h1>PROJECTS</h1></div>
-          <!--Projects START FORM HERE -->
-          <div id="project" class="row">
-            
-            <div class="card mx-5 work">
-              <img  src="template3.jpg" class="img1" >
-              <div class="layer text-start">
-                <p style="width:100%; padding: 10px;text-align:center;margin-bottom: 0;"  class="b1" title="More Details"><a id="prhead" href="pj1.html">SNAKEMANIA 🔗</a></p>
-              </div>
-              
-            </div>
-            <div class="card mx-5 work">
-              <img  src="template1.jpg" class="img1" >
-              <div class="layer text-start">
-                <p style="width:100%; padding: 10px;text-align:center;margin-bottom: 0;"  class=" b1" title="More Details"><a id="prhead" href="pj2.html">CALCULATOR 🔗</a></p>
-              </div>
-              
-            </div>
-            <div class="card mx-5 work">
-              <img  src="template2.png" class="img1">
-              <div class="layer text-start">
-                <p style="width:100%; padding: 10px;text-align:center;margin-bottom: 0;"  class="b1" title="More Details"><a id="prhead" href="pj3.html">BOOKDOM 🔗</a></p>
-              </div>
-              
-            </div>
-                     
-        
-      </div>
-    </div>
-      <!-- projects end -->
-   
-      <div class="container my-3">
-        <div class="head1 text-center" style="margin-top: 100px;margin-bottom: 60px;"><h1 class="text-light">EDUCATION</h1></div>
-        <div class="row  a2 ">
-          
-          <div class="col-12 d-flex align-items-center suba1">
-    
-            <ul>
-              <li>
-                <h3>Bachelor of Computer Science & Engg</h3> 
-                <p style="border:4px solid green;width: fit-content; padding:5px;border-radius: 7px;">2021-2025</p>
-                <p style="margin-bottom: 0;">Institute Of Technical Education And Research</p>
-                <p>Bhubaneswar, Orissa</p>
-              </li>
-              <li style="margin-top: 50px;">
-                <h3>XII Computer Science </h3> 
-                <p style="border:4px solid green;width: fit-content; padding:5px;border-radius: 7px;">2020-2021</p>
-                <p style="margin-bottom: 0;">Atomic Energy Central School-1, Jaduguda</p>
-                <p>Jamshedpur, Jharkhand</p>
-              </li>
-            </ul>
-          </div>
-    
-        </div>
-    
-       </div>
-      
-    
-
-  </main>
-  <footer>
-  
-  </footer>
-  
-  
-
-</script><script  src="script.js"></script>
-  
-</body>
-
-</html>
+}
