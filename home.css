@@ -6,6 +6,7 @@
 }
 
 :root{
+  
   --bg:#FBEEE6;
   --navhead:black;
   --fcirc:#738FA7;
@@ -20,10 +21,13 @@
   --edubg:url("https://images.unsplash.com/photo-1499914485622-a88fac536970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
   --prjhead: rgb(37, 110, 169);
   --prjhover: rgb(5, 78, 151);
-  --source3:url('WhatsApp Image 2023-08-13 at 19.06.55 (1).jpeg');
+  --source3:url('tbn2.jpg');
   --h1:#4d1635;
   --h2:#FBEEE6;
   --footer:#4d1635;
+  --navbar:white;
+  --navbaritem:black;
+  
 }
 .dark{
   --bg:linear-gradient(to right,#00081c,#09173d, #0a034a,#260052,#5f005f,#b40b8f);
@@ -44,6 +48,8 @@
   --h1:white;
   --h2:white;
   --footer:url('galaxy9.jpg');
+  --navbar:transparent;
+  --navbaritem:white;
 }
 
 
@@ -84,7 +90,6 @@ body::after{
     clip-path: circle(30% at right 50%);
     /* #758eb7 */
 }
-
 
 
 .nav-item:hover{
@@ -166,7 +171,7 @@ body::after{
   max-width: 100%;
   margin-top: 60px;
   margin-bottom: 30px;
-  background-color: rgb(57, 64, 64);
+  background: var(--footer);
   position:relative;
   z-index: 1;
   padding: 10px;
@@ -175,33 +180,6 @@ body::after{
   
 } 
 
-.content-top, .content-bottom{
-  width: 100%;
-  height: 100px;
-  background-color:var(--scirc);
-  position: relative;
-  
-}
-.content-top:before {
-    content: " ";
-    position: absolute;
-    top: -10%;
-    width: 100%;
-    height: 80%;
-    background-color:var(--bg);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-}
-.content-bottom:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    bottom: -10%;
-    height: 90%;
-    background-color:var(--bg);
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-}
 
 
 .scroll-text{
@@ -209,7 +187,7 @@ body::after{
   width:80%;
   text-align: right;
   color:white;
-  font-size: 7px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -434,16 +412,17 @@ background-size: cover;
 }
 .suba1{
   position: relative;
- 
 }
-
-
-
 
 li>p{
   font-size: 18px;
-  color: rgb(210, 206, 206);
-  
+  color:var(--h1);
+  font-weight: 600;
+}
+li>h3{
+  color: var(--h1);
+  font-size: 40px;
+  font-weight: 800;
 }
 
 ul{
@@ -498,7 +477,8 @@ body::-webkit-scrollbar{
     
     }
     .collapse{
-        background-color: white;
+        background: var(--navbar);
+        color: var(--navbaritem);
         border-radius: 6px;
     }
     .nav-link{
@@ -556,5 +536,8 @@ body::-webkit-scrollbar{
   height: 85vh;
 }
 
+li>h3{
+  font-size: 20px;
+}
 
 }
